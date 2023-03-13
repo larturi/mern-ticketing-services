@@ -1,4 +1,4 @@
-# MERN Blog Services App
+# MERN Ticketing Services App
 
 - Services: Node & Express & TypeScript
 - Frontend: Next.js
