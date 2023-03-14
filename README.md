@@ -30,7 +30,6 @@ npm start
 
 Listening at <http://localhost:4000>
 
-
 # Docker
 
 ```bash
@@ -49,5 +48,15 @@ To run all Kubernetes Objects (Services, Deployments and Pods) in Local run:
 ```bash
 skaffold dev
 ```
+
+# Ingress
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.6.4/deploy/static/provider/cloud/deploy.yaml
+
+kubectl apply -f ingress-srv.yaml
+
+kubectl delete -A ValidatingWebhookConfiguration ingress-nginx-admission
+
+# Add in etc/hosts
+127.0.0.1 ticketing.dev
 
 ##### Made with ❤️ by Leandro Arturi
