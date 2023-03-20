@@ -10,7 +10,7 @@ router.post('/api/users/signup', [
   body('password').trim().isLength({ min: 6, max: 20 })
     .withMessage('Password must to be 6 to 20 characters'),
 ], 
-(req: Request, res: Response) => {
+async (req: Request, res: Response) => {
 
     const errors = validationResult(req);
 
