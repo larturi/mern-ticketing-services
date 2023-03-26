@@ -59,4 +59,11 @@ kubectl delete -A ValidatingWebhookConfiguration ingress-nginx-admission
 # Add in etc/hosts
 127.0.0.1 ticketing.dev
 
+
+# Secrets
+
+```bash
+kubectl create secret generic jwt-secret --from-literal=JWT_KEY=asdf1234
+```
+
 ##### Made with ❤️ by Leandro Arturi
