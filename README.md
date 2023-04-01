@@ -1,21 +1,9 @@
 # MERN Ticketing Services App
 
-- Services: Node & Express & TypeScript
+- Services: Node 16 & Express & TypeScript
 - Frontend: Next.js
 - Infra: K8S
-
-# Frontend
-
-Run the development server:
-
-```bash
-npm install
-
-npm start
-```
-
-Listening at <http://localhost:8000>
-
+  
 # Services
 
 ## Auth Service
@@ -29,6 +17,16 @@ npm start
 ```
 
 Listening at <http://localhost:4000>
+
+### Tests
+
+```bash
+cd node-auth-service
+
+npm install
+
+npm run test 
+```
 
 # Docker
 
