@@ -48,14 +48,18 @@ skaffold dev
 ```
 
 # Ingress
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.6.4/deploy/static/provider/cloud/deploy.yaml
+<!-- https://kubernetes.github.io/ingress-nginx/deploy/#quick-start -->
 
+```bash
 kubectl apply -f ingress-srv.yaml
 
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.7.0/deploy/static/provider/cloud/deploy.yaml
+
 kubectl delete -A ValidatingWebhookConfiguration ingress-nginx-admission
+```
 
 # Add in etc/hosts
-127.0.0.1 ticketing.dev
+127.0.0.1          localhost ticketing.com
 
 
 # Secrets
@@ -64,4 +68,9 @@ kubectl delete -A ValidatingWebhookConfiguration ingress-nginx-admission
 kubectl create secret generic jwt-secret --from-literal=JWT_KEY=asdf1234
 ```
 
-##### Made with ❤️ by Leandro Arturi
+
+# Delete All Services and Pods
+
+```bash
+
+```
